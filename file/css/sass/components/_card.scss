@@ -1,0 +1,101 @@
+.card-thakyou {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #00000024;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem 1.5rem 2rem;
+    position: relative;
+    z-index: 2;
+
+    @include media1600 {
+        font-size: 14px;
+        max-width: 440px;
+    }
+
+    &__icon {
+        width: 120px;
+        height: 120px;
+        font-size: 2.5em;
+        color: #fff;
+        border-radius: 100%;
+        position: absolute;
+        top: -4rem;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &__title {
+        font-size: 1.9em;
+        font-family: 'HelveticaNeueBold', sans-serif;
+        margin: 0.8rem 0 1rem 0;
+        text-align: center;
+        color: $color-orange;
+    }
+
+    &__desciription {
+        font-size: 1.6em;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: $color-navy-blue-3;
+        line-height: 1.7rem;
+    }
+
+    &__btn-pst {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 335px;
+
+        @include media766 {
+            flex-direction: column;
+        }
+    }
+
+    &__pstn {
+        padding: 2rem 3rem 0 0;
+
+        @include media-min1400 {
+            padding: 2rem 6rem 0 0;
+        }
+
+        @include media-min1600 {
+            padding: 2rem 10rem 0 0;
+        }
+
+        @include media992 {
+            padding: 2rem 3rem 5rem;
+        }
+
+        @include media766{
+            padding: 2rem .7rem 5rem;
+        }
+    }
+
+    &__date {
+        color: $color-black-3;
+        font-family: 'GraphieBold', sans-serif;
+        font-size: 19px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 340px;
+        margin-top: 1.5rem;
+    }
+}
+
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .card-time {
+        max-width: 365px;
+    }
+}

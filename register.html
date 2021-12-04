@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <?php $site = $this->session->userdata('site_config'); ?>
+    <title><?php echo $site->name; ?> | Register</title> -->
+
+    <!-- CS -->
+    <link rel="stylesheet" href="/file/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/file/css/main.css">
+    <style>
+        .header {
+            box-shadow: none !important;
+        }
+    </style>
+    <!-- CS -->
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav-desktop">
+            <div class="container">
+                <div class="row flex-start-wrap ie-mt-2">
+                    <div class="col-md-2 col-lg-1">
+                        <a href="/"><img src="/file/image/logo-vistream.png" alt="Logo"
+                                class="nav-desktop__logo nav-desktop__logo-left"></a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main form-pages">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 register__left-banner">
+                    <div class="register__left__pstn">
+                        <div class="register__left__mobile">
+                            <p class="register__left__title">
+                                Managing Parkinson's disease: <br>A multi-faceted approach
+                            </p>
+                            <div class="register__left__date-pstn">
+                                <img class="register__left__date-img" src="/file/image/date-icon.png">
+                                <p class="register__left__date">Tuesday 30th November 2021</p>
+                            </div>
+                            <div class="register__left__clock-pstn">
+                                <img class="register__left__date-img" src="/file/image/clock-icon.png">
+                                <p class="register__left__clock">7:00–8:30 pm AEDT</p>
+                            </div>
+                        </div>
+                        <div class="register__left__speaker-box">
+                            <img src="/file/image/img-speaker-1.png" class="register__left__speaker-img">
+                            <h3 class="register__left__speaker-name">Speaker-1</h3>
+                            <p class="register__left__speaker-info">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Perferendis eveniet fugiat</p>
+                            <a class="btn-bio" data-toggle="modal" data-target="#speaker1">BIO</a>
+                        </div>
+                        <div class="register__left__speaker-box">
+                            <img src="/file/image/img-speaker-2.png" class="register__left__speaker-img">
+                            <h3 class="register__left__speaker-name">Speaker-2</h3>
+                            <p class="register__left__speaker-info">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Perferendis eveniet fugiat</p>
+                            <a class="btn-bio" data-toggle="modal" data-target="#speaker2">BIO</a>
+                        </div>
+                        <div class="register__left__speaker-box">
+                            <img src="/file/image/img-speaker-3.png" class="register__left__speaker-img">
+                            <h3 class="register__left__speaker-name">Speaker-3</h3>
+                            <p class="register__left__speaker-info">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Perferendis eveniet fugiat</p>
+                            <a class="btn-bio" data-toggle="modal" data-target="#speaker3">BIO</a>
+                        </div>
+                        <div class="register__left__speaker-box">
+                            <img src="/file/image/img-speaker-4.png" class="register__left__speaker-img">
+                            <h3 class="register__left__speaker-name">Speaker-4</h3>
+                            <p class="register__left__speaker-info">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Perferendis eveniet fugiat</p>
+                            <a class="btn-bio" data-toggle="modal" data-target="#speaker4">BIO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-lg-8 flex-column-center">
+                    <div class="form-card">
+                        <h2 class="form-card__title">
+                            <!-- <?=$this->input->get("p",true)?'{'.$this->input->get("p").'}':'{register}'?>  -->
+                            Registretion
+                        </h2>
+                        <span class="form-card__border"></span>
+                        <form action="" id="register_form" method="post">
+
+                            <div class="form-card__pstn">
+
+                                <!-- [Title] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">Title</label>
+                                    <input class="form-control form-card__input" type="text" placeholder="Title"
+                                        id="extra1" name="extra1" maxlength="50" required>
+                                </div>
+
+                                <!-- [FIRST NAME] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">First name</label>
+                                    <input class="form-control form-card__input" type="text" placeholder="First name"
+                                        id="first_name" name="first_name" maxlength="50" required>
+                                </div>
+                                <!-- [FIRST NAME] -->
+
+                                <!-- [LAST NAME] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">Last name</label>
+                                    <input class="form-control form-card__input" type="text" placeholder="Last name"
+                                        id="last_name" name="last_name" maxlength="50" required>
+                                </div>
+                                <!-- [LAST NAME] -->
+                         
+                                <!-- [EMAIL] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">Email Address</label>
+                                    <input class="form-control form-card__input" type="email"
+                                        placeholder="Email Address" id="email" name="email"
+                                        value="<?=$this->session->userdata('email_remember'); ?>" maxlength="50"
+                                        required>
+                                </div>
+                                <!-- [EMAIL] -->
+
+                                <!-- [SELECT SPECIALITY] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">Specialty</label>
+                                    <select class="form-control form-card__input" name="speciality" id="speciality"
+                                        required>
+                                        <option value="" selected disabled>Specialty</option>
+                                        <option value="General Practitioner">General Practitioner</option>
+                                        <option value="Geriatrician">Geriatrician</option>
+                                        <option value="Movement Disorder Specialist">Movement Disorder Specialist
+                                        </option>
+                                        <option value="Neurologist">Neurologist</option>
+                                        <option value="Parkinson’s Nurse">Parkinson’s Nurse</option>
+                                        <option value="other">Other (please specify)</option>
+
+                                    </select>
+                                </div>
+                                <!-- [SELECT SPECIALITY] -->
+
+                                <!--[OTHER SPECIALITY]-->
+                                <div class="form-group" id="otherspeciality" style="display:none;">
+                                    <label class="form-card__label">Please specify</label>
+                                    <input class="form-control form-card__input" type="text"
+                                        placeholder="Please specify" id="extra4" name="extra4" maxlength="50">
+                                </div>
+                                <!--[OTHER SPECIALITY]-->
+
+                                <!-- [Institution] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">Institution</label>
+                                    <input class="form-control form-card__input" type="text" placeholder="Institution"
+                                        id="extra2" name="extra2" maxlength="50" required>
+                                </div>
+
+                                <!-- [SELECT State] -->
+                                <div class="form-group">
+                                    <label class="form-card__label">State</label>
+                                    <select class="required form-control form-card__input" name="extra3" id="extra3"
+                                        required>
+                                        <option value="" selected disabled>State</option>
+                                        <option value="ACT">ACT</option>
+                                        <option value="NSW">NSW</option>
+                                        <option value="NT">NT</option>
+                                        <option value="QLD">QLD</option>
+                                        <option value="SA">SA</option>
+                                        <option value="TAS">TAS</option>
+                                        <option value="VIC">VIC</option>
+                                        <option value="WA">WA</option>
+                                    </select>
+                                </div>
+                                <!-- [SELECT State] -->
+
+                                
+                            </div>
+
+                            <span class="form-card__border"></span>
+
+                            <!-- [CHECKBOXS] -->
+                            <div class="orm-card__checkboxs mt-xs">
+                                <!-- [FIRST CHECKBOX] -->
+                                <div class="form-group mr-sm">
+                                    <label class="checkbox-label register-label" for="cb-first">
+                                        <input id="cb-first" name="cb-first" type="checkbox" class="click-checkbox-3"
+                                            value="1" required>
+                                        <span class="form-card__span"></span>
+                                        <span class="form-card__text">
+                                            I confirm that I am a registered Healthcare Professional
+                                        </span>
+                                    </label>
+                                </div>
+                                <!-- [FIRST CHECKBOX] -->
+
+
+                                <!-- [SECOND CHECKBOX] -->
+                                <div class="form-group mr-sm">
+                                    <label class="checkbox-label register-label" for="cb-second">
+                                        <input id="cb-second" name="cb-second" type="checkbox" class="click-checkbox-3"
+                                            value="1" required>
+                                        <span class="form-card__span"></span>
+                                        <span class="form-card__text">
+                                            Privacy Statement: Personal information will be collected, stored and used
+                                            in accordance with Pfizer’s privacy policy available at www.pfizer.com.au If
+                                            you have any questions about Pfizer’s approach to privacy, please contact
+                                            our Privacy Officer by email privacyofficer.anz@pfizer.com
+                                        </span>
+                                    </label>
+                                </div>
+                                <!-- [SECOND CHECKBOX] -->
+
+                                <p class="form-card__check-text">To hear about the next webinar in the series, receive a
+                                    link to the on-demand version of this webinar, get notified about additional
+                                    resources and other events, please tick the box below.</p>
+
+                                <!-- [THIRD CHECKBOX] -->
+                                <div class="form-group mr-sm">
+                                    <label class="checkbox-label register-label" for="cb-third">
+                                        <input id="cb-third" name="cb-third" type="checkbox" class="click-checkbox-3"
+                                            value="1" required>
+                                        <span class="form-card__span"></span>
+                                        <span class="form-card__text">
+                                            By ticking this box, I consent to receive electronic communications from
+                                            Pfizer Australia and its affiliates regarding (a) Pfizer’s products and
+                                            services; (b) Pfizer sponsored programs, events and initiatives; (c)
+                                            customer feedback; and (d) educational information.
+                                        </span>
+                                    </label>
+                                </div>
+                                <!-- [THIRD CHECKBOX] -->
+
+                            </div>
+                            <!-- [CHECKBOXS] -->
+
+
+                            <!-- REGISTER FORM NAME -->
+                            <input type="hidden" id="form_name" name="form_name" value="latamariaacademy" />
+                            <!-- REGISTER FROM NAME -->
+
+                            <!-- REGISTER PAGE NAME -->
+                            <!-- <input type="hidden" id="page" name="page"
+                                value="<?=$this->input->get("p",true)?$this->input->get("p"):''?>" /> -->
+                            <!-- REGISTER PAGE NAME -->
+
+                            <!-- [BUTTON] -->
+                            <div class="d-flex justify-content-center align-items-center">
+                                <button class=" btn-register-page mt-sm">REGISTER NOW</button>
+                            </div>
+                            <!-- [BUTTON] -->
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src="/file/image/bottom-img.png" class="form-card__bottom-logo">
+    </main>
+
+      <!-- [ MODAL SPEAKER 1] -->
+      <div class="modal fade" id="speaker1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal__dialog">
+            <div class="modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <img src="/file/image/img-speaker-1.png" alt="Speaker" class="modal__header__img">
+                    <div class="modal__header__info">
+                        <h2 class="modal__header__title">
+                            Speaker-1
+                        </h2>
+                        <p class="modal__header__detail">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eveniet fugiat  numquam a cumque culpa
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body modal__body">
+                    <p class="modal__body__text">
+                        speaker-bio
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ MODAL SPEAKER 1] -->
+
+     <!-- [ MODAL SPEAKER 2] -->
+     <div class="modal fade" id="speaker2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal__dialog">
+            <div class="modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <img src="/file/image/img-speaker-2.png" alt="Speaker" class="modal__header__img">
+                    <div class="modal__header__info">
+                        <h2 class="modal__header__title">
+                            Speaker-2
+                        </h2>
+                        <p class="modal__header__detail">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eveniet fugiat  numquam a cumque culpa
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body modal__body">
+                    <p class="modal__body__text">
+                        speaker-bio
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ MODAL SPEAKER 2] -->
+
+    <!-- [ MODAL SPEAKER 3] -->
+    <div class="modal fade" id="speaker3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal__dialog">
+            <div class="modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <img src="/file/image/img-speaker-3.png" alt="Speaker" class="modal__header__img">
+                    <div class="modal__header__info">
+                        <h2 class="modal__header__title">
+                            Speaker-3
+                        </h2>
+                        <p class="modal__header__detail">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eveniet fugiat  numquam a cumque culpa
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body modal__body">
+                    <p class="modal__body__text">
+                        speaker-bio
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ MODAL SPEAKER 3] -->
+
+    <!-- [ MODAL SPEAKER 4] -->
+    <div class="modal fade" id="speaker4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal__dialog">
+            <div class="modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <img src="/file/image/img-speaker-4.png" alt="Speaker" class="modal__header__img">
+                    <div class="modal__header__info">
+                        <h2 class="modal__header__title">
+                            Speaker-4
+                        </h2>
+                        <p class="modal__header__detail">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eveniet fugiat  numquam a cumque culpa
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body modal__body">
+                    <p class="modal__body__text">
+                     speaker-bio
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ MODAL SPEAKER 4] -->
+
+    <footer class="footer bg-white flex-row-center">
+        <div class="container">
+            <div class="row ie-mt-2">
+                <div class="col-md-3 col-sm-12 flex-start-sm-colmn">
+                </div>
+                <div class="col-md-9 col-sm-12 flex-end-sm-colmn">
+                    <div class="footer__pstn">
+                        <p class="footer__code">© footer cme</p>
+                        <div>
+                            <p class="footer__support">Proudly supported by</p>
+                            <img src="/file/image/footer-logo.png" alt="logo" class="footer__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/file/js/jquery-3.6.0.min.js"></script>
+    <script src="/file/js/bootstrap.min.js"></script>
+
+    <script src="/assets/common/general/js/common.js?v=5.2.4"></script>
+    <script src="/assets/common/general/js/functions.js?v=5.1.6"></script>
+
+    <script>
+        // Speciality değiştiğinde...
+        $("#speciality").change(function () {
+            if ($(this).val() == "other") {
+                $("#otherspeciality").show("fast");
+                $("#extra4").val('');
+                $("#extra4").attr('required', true);
+
+            } else {
+                $("#otherspeciality").hide("fast");
+                $("#extra4").val('null');
+                $("#extra4").attr('required', false);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

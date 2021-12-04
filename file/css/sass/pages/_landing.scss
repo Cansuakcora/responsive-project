@@ -1,0 +1,369 @@
+// [LANDING BANNER] //
+.landing {
+    &__banner {
+        width: 100%;
+        bottom: 19px;
+        position: relative;
+        z-index: 99;
+    }
+
+
+    &__left {
+
+        &-banner {
+            background-color: $color-navy-blue-3;
+            padding: 0;
+        }
+
+        &__pstn {
+            padding: 3.5rem 1.5rem;
+            width: 100%;
+            max-width: 355px;
+            background-color: $color-white;
+            height: 100%;
+
+            @include media-min1400 {
+                max-width: 395px;
+            }
+
+            @include media-min1600 {
+                max-width: 455px;
+                padding: 3.5rem 2rem;
+            }
+
+            @include media-min1800 {
+                max-width: 470px;
+            }
+
+            @include media1250 {
+                max-width: 385px;
+            }
+
+            @include media992 {
+                max-width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
+
+        &__speaker {
+
+            &-box {
+                position: relative;
+                margin-bottom: 3.5rem;
+
+                @include media-min1400 {
+                    margin-bottom: 4.5rem;
+                }
+
+                @include media992 {
+                    width: 100%;
+                    max-width: 315px;
+                }
+            }
+
+            &-img {
+                width: 100%;
+                max-width: 100px;
+                position: absolute;
+                right: -5rem;
+
+                @include media-min1400 {
+                    max-width: 123px;
+                }
+
+                @include media-min1600 {
+                    right: -6.5rem;
+                    max-width: 130px;
+                }
+
+                @include media1250 {
+                    position: static;
+                    right: auto;
+                    display: flex;
+                    margin: 0 auto;
+                }
+            }
+
+            &-name {
+                font-family: 'HelveticaNeueBold', sans-serif;
+                color: $color-navy-blue-3;
+                font-size: 22px;
+                margin-bottom: .1rem;
+
+                @include media-min1400 {
+                    font-size: 25px;
+                    margin-bottom: .3rem;
+                }
+
+                @include media-min1600 {
+                    font-size: 28px;
+                }
+
+                @include media1250 {
+                    text-align: center;
+                }
+            }
+
+            &-info {
+                color: $color-navy-blue-3;
+                font-family: 'HelveticaNeueMedium', sans-serif;
+                line-height: 1.1rem;
+                font-size: 13px;
+
+                @include media-min1400 {
+                    font-size: 14px;
+                }
+
+                @include media-min1600 {
+                    font-size: 17px;
+                }
+
+                @include media1250 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+    &__right {
+
+        &-banner {
+            background-color: $color-navy-blue-3;
+            padding: 5rem 3rem 7rem;
+            position: relative;
+
+            @include media-min1400 {
+                padding: 5rem 5rem 7rem 3rem;
+            }
+
+            @include media-min1800 {
+                padding: 5rem 6rem 7rem 0;
+            }
+
+            @include media766 {
+                padding: 5rem 1rem 7rem;
+            }
+        }
+
+        &__date {
+            color: $color-white;
+            font-size: 28px;
+            font-family: 'HelveticaNeueBold', sans-serif;
+            margin-bottom: .8rem;
+
+            @include media766 {
+                text-align: center;
+                font-size: 22px;
+            }
+        }
+
+        &__clock {
+            color: $color-white;
+            font-size: 24px;
+
+            @include media766 {
+                text-align: center;
+                font-size: 19px;
+            }
+        }
+
+        &__info {
+            color: $color-white;
+            font-size: 19px;
+            line-height: 1.4rem;
+            margin-top: .8rem;
+
+            @include media766 {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        &__info-link {
+            color: $color-white;
+            font-size: 19px;
+            line-height: 1.2rem;
+            margin-top: .8rem;
+            border-bottom: 2px solid $color-orange;
+            width: 100%;
+            max-width: 195px;
+            cursor: pointer;
+
+            @include media766 {
+                text-align: center;
+                font-size: 16px;
+                margin: 0.8rem auto 0;
+            }
+        }
+
+        &__dot {
+            list-style: none;
+            color: $color-white;
+            font-size: 18px;
+
+            &::before {
+                content: "•";
+                color: $color-white;
+                margin-right: .5rem;
+            }
+
+            @include media766 {
+                font-size: 15px;
+            }
+        }
+
+        &__title {
+            color: $color-white;
+            font-family: 'HelveticaNeueBold', sans-serif;
+            font-size: 35px;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+
+            @include media766 {
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+
+        &__subtitle {
+            color: $color-white;
+            font-size: 28px;
+            font-family: 'HelveticaNeueBold', sans-serif;
+            margin: 1.7rem 0;
+            line-height: 2rem;
+
+            @include media766 {
+                font-size: 20px;
+                line-height: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        &__bottom-img {
+            position: absolute;
+            right: 0;
+            bottom: -3.3rem;
+            width: 100%;
+            max-width: 500px;
+            z-index: 2;
+
+            @include media766 {
+                bottom: -1.3rem;
+            }
+        }
+
+    }
+
+
+}
+
+// [LANDING BANNER] //
+
+// AGENDA //
+.agenda {
+
+    &__title {
+        color: $color-white;
+        font-size: 24px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        font-family: 'HelveticaNeueBold', sans-serif;
+    }
+
+    &__table {
+
+        width: 100%;
+        max-width: 700px;
+
+        @include media-min1600 {
+            max-width: 840px;
+        }
+
+        &__head {
+
+            &__row {
+                color: $color-white;
+                display: flex;
+                border-bottom: 1px solid $color-white;
+                padding: .7rem .5rem;
+
+                @include media766 {
+                    font-size: 14px;
+                }
+            }
+
+            &__col1 {
+                width: 250px;
+
+                @include media766 {
+                    width: 180px;
+                }
+            }
+
+            &__col2 {
+                width: 100%;
+            }
+
+            &__col3 {
+                width: 400px;
+
+                @include media766 {
+                    width: 165px;
+                }
+            }
+        }
+
+        &__body {
+
+            &__row {
+                color: $color-white;
+                display: flex;
+                border-bottom: 1px solid $color-white;
+                padding: .8rem .5rem;
+                align-items: center;
+
+                @include media766 {
+                    font-size: 13px;
+                }
+            }
+
+            &__col1 {
+                width: 250px;
+
+                @include media766 {
+                    width: 180px;
+                }
+            }
+
+            &__col2 {
+                width: 100%;
+
+                @include media-min1600 {
+                    padding: 0 1rem 0 0;
+                }
+
+                br {
+                    @include media-min1600 {
+                        display: none;
+                    }
+                }
+            }
+
+            &__col3 {
+                width: 400px;
+
+                @include media766 {
+                    width: 165px;
+                }
+            }
+
+        }
+    }
+}
+
+
+// AGENDA //

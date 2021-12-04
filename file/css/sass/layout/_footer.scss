@@ -1,0 +1,41 @@
+.footer {
+    width: 100%;
+    min-height: 120px;
+    // border-top: 1px solid rgba($color-gray-light, 0.30);
+    box-shadow: 0px 3px 6px #00000029;
+    position: relative;
+
+    &__img {
+        width: 100%;
+        max-width: 130px;
+    }
+
+    &__pstn {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__code {
+        color: $color-navy-blue-3;
+        margin-right: 1.5rem;
+        font-size: 13px;
+        text-align: right;
+
+        @include media766 {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+    &__support {
+        margin-bottom: .5rem;
+        color: $color-navy-blue-3;
+        font-size: 13px;
+        
+        @include media766 {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+}

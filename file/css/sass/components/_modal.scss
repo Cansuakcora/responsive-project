@@ -1,0 +1,153 @@
+.modal {
+
+    &__item {
+        a {
+            color: $color-black-3;
+            font-size: 18px;
+        }
+    }
+
+    &__text-bold {
+        display: block;
+        font-weight: bold;
+        margin: .4rem 0;
+        font-size: 16px;
+    }
+
+    &__text-font{
+        font-size: 13px;
+    }
+
+    &__text-line{
+        font-weight: bold;
+        text-decoration: underline; 
+    }
+
+    &__dialog {
+        position: relative;
+
+        @include min-media576 {
+            max-width: 600px !important;
+        }
+    }
+
+    &__dialog-link {
+
+        @include min-media576 {
+            max-width: 340px !important;
+        }
+    }
+
+    &__content {
+        border-radius: 15px;
+        padding: 0 1rem;
+    }
+
+    &__close {
+        padding: 1px 0px !important;
+        background-color: $color-white !important;
+        border-radius: 100%;
+        width: 25px !important;
+        height: 26px !important;
+        margin: 0 !important;
+        opacity: 1 !important;
+        font-weight: 300 !important;
+
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+
+        span {
+            font-size: 33px;
+            line-height: 24px;
+            color: $color-black-3;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 2px solid rgb(222, 226, 230);
+
+        @include media500 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__img {
+            width: 110px;
+            height: 110px;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+
+        &__title {
+            font-size: 1.3em;
+            color: $color-navy-blue-3;
+            font-family: 'HelveticaNeueBold', sans-serif;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: .5rem;
+
+            @include media500 {
+                text-align: center;
+                margin-top: .5rem;
+            }
+        }
+
+        &__detail {
+            font-size: .9em;
+            margin-bottom: .8rem;
+            color: $color-navy-blue-3;
+            font-style: italic;
+
+            @include media500 {
+                text-align: center;
+            }
+
+            span {
+                display: block;
+
+                @include media500 {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    &__body {
+
+        &__text {
+            font-size: .9em;
+            margin-bottom: .8rem;
+            color: $color-blue-4;
+        }
+
+        &__text-link {
+            font-size: 1em;
+            margin-bottom: .8rem;
+            color: $color-navy-blue-3;
+            text-align: center;
+
+            span{
+                margin-bottom: .5rem;
+
+            }
+        }
+    }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .modal__close {
+        padding: 2px 4px 4px 3px !important;
+    }
+
+    .modal__close span {
+        font-size: 30px;
+    }
+}

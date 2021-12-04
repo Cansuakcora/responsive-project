@@ -1,0 +1,122 @@
+.nav_mirror {
+    width: 100%;
+    height: 100px;
+
+    @include media991 {
+        display: none;
+    }
+
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+        display: none;
+    }
+}
+
+.header {
+    width: 100%;
+    min-height: 110px;
+    margin: auto 0;
+    background-color: $color-white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    top: 0;
+    transition: top 0.3s;
+
+    @include media-min1600{
+        min-height: 120px;
+    }
+
+    @include media991 {
+        position: static;
+    }
+
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+        position: static;
+    }
+
+    &__flag-img {
+        width: 100%;
+        max-width: 35px;
+        margin-right: .2rem;
+    }
+
+    .header__language {
+        animation: auto;
+        appearance: auto;
+        font-size: 16px;
+        font-family: 'FSAlbertBold', sans-serif;
+        color: $color-navy-blue;
+
+        @include media360 {
+            font-size: 14px;
+        }
+    }
+
+    .nav-desktop {
+        width: 100%;
+
+        &__logo-left,
+        &__logo-right {
+            width: 95px;
+
+            @include media-min1600{
+                width: 110px;
+            }
+
+            @include media991{
+                margin-bottom: 1rem;
+            }
+
+            @include media766{
+                width: 85px;
+                margin: .5rem auto 1.5rem;
+                display: table;
+            }
+        }
+
+        &__list {
+
+            &__item {
+                float: left;
+                margin: 0 11px;
+
+            }
+
+            &__link {
+                font-size: 14px;
+                font-family: 'GraphieBold', sans-serif;
+                // text-transform: uppercase;
+                transition: color .3s ease-in;
+                color: $color-orange;
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+
+
+    &__mt {
+        margin-top: 100px;
+
+        @include media991 {
+            margin-top: 0;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            margin-top: 0;
+        }
+    }
+
+}
+
+.mr-mobile {
+    @include media1023 {
+        margin-right: 1rem;
+    }
+}

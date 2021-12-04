@@ -1,0 +1,199 @@
+.form-pages {
+    position: relative;
+    // background-image: url('/file/image/bg-form.png');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // padding: 5em 0 4.5em 0;
+    // display: block;
+    // min-height: calc(100vh - 200px);
+
+    // @media screen and (-ms-high-contrast: active),
+    // (-ms-high-contrast: none) {
+    //     padding: 3em 0 4.5em 0;
+    // }
+}
+
+.register {
+    &__banner {
+        width: 100%;
+        bottom: 30px;
+        position: relative;
+        z-index: 99;
+    }
+
+
+    &__left {
+
+        &-banner {
+            background-color: $color-white;
+            padding: 0;
+        }
+
+        &__pstn {
+            padding: 3.5rem 1.5rem;
+            width: 100%;
+            max-width: 355px;
+            background-color: $color-navy-blue-3;
+            height: 100%;
+
+            @include media-min1400 {
+                max-width: 395px;
+            }
+
+            @include media-min1600 {
+                max-width: 455px;
+                padding: 3.5rem 2rem;
+            }
+
+            @include media-min1800 {
+                max-width: 510px;
+            }
+
+            @include media1250 {
+                max-width: 385px;
+            }
+
+            @include media992 {
+                max-width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
+
+        &__title {
+            color: $color-white;
+            font-size: 20px;
+            line-height: 1.5rem;
+
+            @include media-min1600 {
+                font-size: 24px;
+            }
+        }
+
+        &__date {
+            color: $color-white;
+            font-family: 'HelveticaNeueBold', sans-serif;
+
+            &-img {
+                width: 45px;
+                margin-right: 1rem;
+            }
+
+            &-pstn {
+                display: flex;
+                align-items: center;
+                margin: 2rem 0 0;
+            }
+
+        }
+
+        &__clock {
+
+            color: $color-white;
+
+            &-pstn {
+                display: flex;
+                align-items: center;
+                margin: 1rem 0 2.5rem;
+            }
+        }
+
+        &__mobile {
+
+            @include media992 {
+                width: 100%;
+                max-width: 635px;
+                margin: 0 auto;
+                display: table;
+                padding: 0 10rem;
+            }
+
+            @include media766{
+                padding: 0 1rem;
+            }
+        }
+
+        &__speaker {
+
+            &-box {
+                position: relative;
+                margin-bottom: 3.5rem;
+
+                @include media-min1400 {
+                    margin-bottom: 4.5rem;
+                }
+
+                @include media992 {
+                    width: 100%;
+                    max-width: 315px;
+                }
+            }
+
+            &-img {
+                width: 100%;
+                max-width: 100px;
+                position: absolute;
+                right: -5rem;
+
+                @include media-min1400 {
+                    max-width: 123px;
+                }
+
+                @include media-min1600 {
+                    right: -6.5rem;
+                    max-width: 130px;
+                }
+
+                @include media1250 {
+                    position: static;
+                    right: auto;
+                    display: flex;
+                    margin: 0 auto;
+                }
+            }
+
+            &-name {
+                font-family: 'HelveticaNeueBold', sans-serif;
+                color: $color-white;
+                font-size: 22px;
+                margin-bottom: .1rem;
+
+                @include media-min1400 {
+                    font-size: 25px;
+                    margin-bottom: .3rem;
+                }
+
+                @include media-min1600 {
+                    font-size: 28px;
+                }
+
+                @include media1250 {
+                    text-align: center;
+                }
+            }
+
+            &-info {
+                color: $color-white;
+                font-family: 'HelveticaNeueMedium', sans-serif;
+                line-height: 1.1rem;
+                font-size: 13px;
+
+                @include media-min1400 {
+                    font-size: 14px;
+                }
+
+                @include media-min1600 {
+                    font-size: 17px;
+                }
+
+                @include media1250 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
